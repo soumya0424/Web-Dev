@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Height Sidebar with Image Background</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Flex layout for sidebar and content */
+        }
+
+        header {
+            background-image: url('ocean.jpg'); /* Keeps the existing header image */
+            background-size: cover;
+            background-position: center;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            color: gray;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #FFD9B3; /* Light peach color similar to the reference */
+            color: #800000; /* Dark red text color */
+            padding: 20px;
+            height: calc(100vh - 150px); /* Full height minus the header */
+            box-sizing: border-box; /* Includes padding in height */
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #800000; /* Matches the sidebar text color */
+            font-weight: bold;
+        }
+
+        .content {
+            flex: 1; /* Takes up remaining space */
+            padding: 20px;
+            background-image: url('beige.jpg'); /* Replace with the provided image */
+            background-size: cover; /* Ensures the image covers the entire content area */
+            background-position: center;
+            color: black; /* Text color */
+            box-sizing: border-box;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100%;">
+        <!-- Header -->
+        <header>
+            <img src="images.png" alt="Logo">
+            <h1>School of Computer Science</h1>
+        </header>
+
+        <!-- Page Layout -->
+        <div style="display: flex;">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#faculty">Faculty</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div class="content">
+                <p>Welcome to the School of Computer Science!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
