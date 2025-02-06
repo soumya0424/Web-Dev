@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+        }
+        header {
+            background-image: url('ocean.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            color: gray;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #FFD9B3;
+            color: #800000;
+            padding: 20px;
+            height: calc(100vh - 150px);
+            box-sizing: border-box;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li button {
+            text-decoration: none;
+            color: #800000;
+            font-weight: bold;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sidebar ul li button:hover {
+            text-decoration: underline;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-image: url('beige.jpg');
+            background-size: cover;
+            background-position: center;
+            color: black;
+            box-sizing: border-box;
+        }
+
+        .content p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid black;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        function showStudentPopup() {
+            document.getElementById('studentPopup').style.display = 'block';
+        }
+        function showAdminPopup() {
+            document.getElementById('adminPopup').style.display = 'block';
+        }
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div style="width: 100%;">
+        <header>
+            <img src="images.png" alt="Logo">
+            <h1>School of Computer Science</h1>
+        </header>
+        <div style="display: flex;">
+            <div class="sidebar">
+                <ul>
+                    <li><button onclick="alert('About section selected!')">About</button></li>
+                    <li><button onclick="showStudentPopup()">Student</button></li>
+                    <li><button onclick="showAdminPopup()">Admin</button></li>
+                </ul>
+            </div>
+            <div class="content">
+                <p>Welcome to the School of Computer Science!</p>
+                <p>Select an option from the sidebar to proceed.</p>
+            </div>
+        </div>
+    </div>
+    <div id="studentPopup" class="popup">
+        <h3>Student Login</h3>
+        <form>
+            <label for="rollno">Roll No:</label>
+            <input type="text" id="rollno" name="rollno" required><br><br>
+            <button type="submit">OK</button>
+            <button type="button" onclick="closePopup('studentPopup')">Cancel</button>
+        </form>
+    </div>
+    <div id="adminPopup" class="popup">
+        <h3>Admin Login</h3>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">OK</button>
+            <button type="button" onclick="closePopup('adminPopup')">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>

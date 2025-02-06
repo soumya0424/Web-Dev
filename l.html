@@ -1,85 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full-Width Header Background</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0; 
-            padding: 0; 
-        }
-
-        header {
-            background-image: url('ocean.jpg');
-            background-size: cover;                 
-            background-position: center;            
-            height: 150px;                          
-            display: flex;                          
-            align-items: center;                    
-            padding: 0 20px;                        
-            color: gray;                           
-        }
-
-        header img {
-            width: 50px;        
-            height: 50px;       
-            margin-right: 20px; 
-        }
-
-        header h1 {
-            margin: 0;          
-        }
-
-        .container {
-            display: flex;
-        }
-
-        .sidebar {
-            width: 200px;
-            background-color: #DADADA;
-            padding: 10px;
-        }
-
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            margin-bottom: 10px;
-        }
-
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #065A00;
-            font-weight: bold;
-        }
-
-        .content {
-            flex: 1;
-            padding: 20px;
-        }
-    </style>
+    <title>Popup Login Form</title>
 </head>
 <body>
-    <header>
-        <img src="images.png" alt="Logo">
-        <h1>School of Computer Science</h1>
-    </header>
-    <div class="container">
-        <div class="sidebar">
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#faculty">Faculty</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <p>Welcome to the School of Computer Science!</p>
-        </div>
+    <!-- Button to open the popup -->
+    <button onclick="document.getElementById('popupForm').style.display='block'">Open Form</button>
+
+    <!-- Popup Form -->
+    <div id="popupForm" style="display:none; border: 1px solid black; padding: 20px; background-color: white;">
+        <form action="anotherpage.html" method="POST">
+            <div style="display: flex;">
+                <!-- Left Column -->
+                <div style="flex: 1; text-align: center;">
+                    <img src="image-placeholder.png" alt="Image" style="max-width: 100px;">
+                </div>
+                <!-- Right Column -->
+                <div style="flex: 2;">
+                    <!-- Name Input -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <!-- Roll Number Input -->
+                    <label for="rollno">Roll No:</label>
+                    <input type="text" id="rollno" name="rollno" required><br><br>
+
+                    <!-- Radio Button -->
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br><br>
+
+                    <!-- Checkboxes -->
+                    <label>Engineering Streams:</label><br>
+                    <input type="checkbox" id="cse" name="stream" value="cse">
+                    <label for="cse">CSE</label><br>
+                    <input type="checkbox" id="ece" name="stream" value="ece">
+                    <label for="ece">ECE</label><br>
+                    <input type="checkbox" id="civil" name="stream" value="civil">
+                    <label for="civil">Civil</label><br><br>
+
+                    <!-- Dropdown with Option Groups -->
+                    <label for="semester">Choose Semester:</label>
+                    <select id="semester" name="semester">
+                        <optgroup label="First Year">
+                            <option value="sem1">Semester 1</option>
+                            <option value="sem2">Semester 2</option>
+                        </optgroup>
+                        <optgroup label="Second Year">
+                            <option value="sem3">Semester 3</option>
+                            <option value="sem4">Semester 4</option>
+                        </optgroup>
+                        <optgroup label="Third Year">
+                            <option value="sem5">Semester 5</option>
+                            <option value="sem6">Semester 6</option>
+                        </optgroup>
+                        <optgroup label="Fourth Year">
+                            <option value="sem7">Semester 7</option>
+                            <option value="sem8">Semester 8</option>
+                        </optgroup>
+                    </select><br><br>
+
+                    <!-- Text Area -->
+                    <label for="comments">Comments:</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="30"></textarea><br><br>
+
+                    <!-- Submit and Reset Buttons -->
+                    <button type="submit">Submit</button>
+                    <button type="reset" onclick="document.getElementById('popupForm').style.display='none'">Cancel</button>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
-</html>
+</html>    
+  
