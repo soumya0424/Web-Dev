@@ -1,40 +1,65 @@
-# Web-Dev
+# WEB-DEV
 
-A collection of web development projects and lab exercises.
+_Structure, Style, and Build — Frontend Web Development Labs_
+
+[![Last Commit](https://img.shields.io/badge/last%20commit-february%202025-black)]()  [![HTML](https://img.shields.io/badge/html-89.4%25-orange)]()  [![PHP](https://img.shields.io/badge/php-4.3%25-blue)]()  [![Languages](https://img.shields.io/badge/languages-3-blue)]()
+
+Built with the tools and technologies:
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+
+---
 
 ## Overview
 
-This repository contains web development projects built using HTML, CSS, PHP, and Hack. Organized into multiple lab folders for structured learning.
+Web-Dev is a collection of frontend web development lab exercises covering HTML structure, CSS styling, and PHP basics. Organized into numbered lab folders for progressive skill-building.
 
-## Tech Stack
+### Why Web-Dev?
 
-- HTML
-- CSS
-- PHP
-- Hack
+This repository documents structured lab-based learning through hands-on frontend exercises. The core topics include:
 
-## Project Structure
+- 🏗️📄 **HTML Structure**: Semantic page layouts, forms, and document structure.
+- 🎨📱 **CSS Styling**: Visual design, layouts, and responsive styling techniques.
+- 💻🔧 **PHP Basics**: Server-side scripting introduced in later labs.
+- 📁📚 **Lab-Based Organization**: Six structured lab folders with progressive complexity.
 
-```
-Web-Dev/
-├── Lab 1/
-├── Lab 2/
-├── Lab 3/
-├── Lab 4/
-├── Lab 5/
-├── Lab 6/
-└── New folder/
-```
+---
 
 ## Getting Started
 
-Open any `.html` file in a browser or use a local development server:
+### Prerequisites
+
+This project requires the following dependencies:
+
+- **Browser**: Any modern web browser
+- **Optional**: A local server (e.g., XAMPP, WAMP) for PHP files
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/soumya0424/Web-Dev
+   cd Web-Dev
+   ```
+
+### Usage
+
+Open any `.html` file directly in your browser:
 
 ```bash
-# Using Python's built-in server
+# Or serve locally with Python
 python -m http.server 8080
 ```
 
-## Author
-
-**Soumya Naiya** - [soumya0424](https://github.com/soumya0424)
+Then navigate to `http://localhost:8080` and browse the lab folders.
