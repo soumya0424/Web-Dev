@@ -2,7 +2,7 @@
 
 _Structure and Build — Frontend Web Development Labs_
 
-![Last Commit](https://img.shields.io/badge/last%20commit-february%202025-black)() ![HTML](https://img.shields.io/badge/html-89.4%25-orange)() ![PHP](https://img.shields.io/badge/php-4.3%25-blue)() ![Languages](https://img.shields.io/badge/languages-3-blue)()
+![Last Commit](https://img.shields.io/github/last-commit/soumya0424/Web-Dev?style=flat&logo=git&logoColor=white&color=0080ff) ![HTML](https://img.shields.io/badge/html-89.4%25-orange) ![PHP](https://img.shields.io/badge/php-4.3%25-blue) ![Languages](https://img.shields.io/github/languages/count/soumya0424/Web-Dev?style=flat&color=0080ff)
 
 Built with the tools and technologies:
 
